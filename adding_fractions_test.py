@@ -6,7 +6,7 @@ class Fraction:
    def plus(self, augend):
        return 0
 
-class AddingFractionTest(unittest.TestCase):
+class AddingFractionsTest(unittest.TestCase):
     def testHookUp(self):
         assert 0 + 0 == 0
 

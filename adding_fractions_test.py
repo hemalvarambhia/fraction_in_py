@@ -30,6 +30,15 @@ class AddingFractionsTest(unittest.TestCase):
         sum = addend.plus(augend)
         assert sum == 2, 'Expected 1, got ' + str(sum)
 
+    def test_that_minus_one_plus_zero_equals_minus_one(self): 
+        addend = Fraction(-1)
+        augend = Fraction(0)
+        sum = addend.plus(augend)
+        assert sum == -1, ' Expected -1, got ' + str(sum)
+      
+
+      
+
 if __name__ == "__main__":
 
     unittest.main() # run all tests

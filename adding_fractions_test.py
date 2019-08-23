@@ -24,19 +24,19 @@ class AddingFractionsTest(unittest.TestCase):
     def test_that_zero_plus_one_equals_one(self):
         addend = Fraction(0)
         augend = Fraction(1)
-        sum = addend.plus(augend)
+        sum = addend + augend
         assert sum == 1, 'Expected 1, got ' + str(sum)
 
     def test_that_one_plus_one_equals_two(self):
         addend = Fraction(1)
         augend = Fraction(1)
-        sum = addend.plus(augend)
+        sum = addend + augend
         assert sum == 2, 'Expected 1, got ' + str(sum)
 
     def test_that_minus_one_plus_zero_equals_minus_one(self): 
         addend = Fraction(-1)
         augend = Fraction(0)
-        sum = addend.plus(augend)
+        sum = addend + augend
         assert sum == -1, ' Expected -1, got ' + str(sum)
       
 

@@ -3,12 +3,9 @@ class Fraction:
    def __init__(self, numerator):
        self.numerator = int(numerator)
        pass
-       
-   def plus(self, augend):
-       return int(self.numerator) + int(augend.numerator)
 
    def __add__(self, augend):
-      return self.plus(augend) 
+      return int(self.numerator) + int(augend.numerator)
 
 class AddingFractionsTest(unittest.TestCase):
     def testHookUp(self):

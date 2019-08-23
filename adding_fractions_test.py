@@ -7,6 +7,9 @@ class Fraction:
    def plus(self, augend):
        return int(self.numerator) + int(augend.numerator)
 
+   def __add__(self, augend):
+      return self.plus(augend) 
+
 class AddingFractionsTest(unittest.TestCase):
     def testHookUp(self):
         assert 0 + 0 == 0
@@ -15,7 +18,7 @@ class AddingFractionsTest(unittest.TestCase):
     def test_that_zero_plus_zero_equals_zero(self):
         addend = Fraction(0)
         augend = Fraction(0)
-        sum = addend.plus(augend)
+        sum = addend + augend
         assert sum == 0, 'Expected 0, got ' + str(sum)
 
     def test_that_zero_plus_one_equals_one(self):

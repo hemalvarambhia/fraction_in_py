@@ -5,7 +5,7 @@ class Fraction:
        self.denominator = int(denominator)
        
    def __add__(self, augend):
-      return Fraction(int(self.numerator) + int(augend.numerator), 5)
+      return Fraction(int(self.numerator) + int(augend.numerator), 3)
 
    def as_integer(self):
       return self.numerator
@@ -57,12 +57,19 @@ class AddingFractionsTest(unittest.TestCase):
         sum = addend + augend
         self.assert_equals(sum.as_integer(), -2)
 
-    #def test_that_1_on_3_plus_1_on_3_equals_2_on_3(self):
-    #   addend = Fraction(1,3)
-    #   augend = Fraction(1,3)
-    #   sum = addend + augend
-    #   self.assert_equals(sum.numerator, 2)
-    #   self.assert_equals(sum.denominator, 3)
+    def test_that_1_on_3_plus_1_on_3_equals_2_on_3(self):
+       addend = Fraction(1,3)
+       augend = Fraction(1,3)
+       sum = addend + augend
+       self.assert_equals(sum.numerator, 2)
+       self.assert_equals(sum.denominator, 3)
+
+    def test_that_2_on_3_plus_2_on_3_equals_4_on_3(self):
+       addend = Fraction(2,3)
+       augend = Fraction(2,3)
+       sum = addend + augend
+       self.assert_equals(sum.numerator, 4)
+       self.assert_equals(sum.denominator, 3)
 
     def test_that_2_on_5_plus_1_on_5_equals_3_on_5(self):
        addend = Fraction(2, 5)

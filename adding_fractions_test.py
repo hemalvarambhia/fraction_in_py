@@ -8,7 +8,7 @@ class Fraction:
        if augend.denominator == self.denominator:
            return Fraction(int(self.numerator) + int(augend.numerator), self.denominator)
        else:
-           return Fraction(7,augend.denominator * self.denominator)
+           return Fraction(self.denominator + augend.denominator,augend.denominator * self.denominator)
 
 
 
@@ -92,6 +92,13 @@ class AddingFractionsTest(unittest.TestCase):
 
        # This test fails ^^^
        # Next step is to add Fractions that do not have the same denominator
+
+    def test_that_1_on_3_plus_1_on_5_equals_8_on_15(self):
+        addend = Fraction(1, 3)
+        augend = Fraction(1, 5)
+        sum = addend + augend
+        self.assert_equals(sum.numerator, 8)
+        self.assert_equals(sum.denominator, 15)
 
     def assert_equals(self, sum, expected):
         assert sum == expected, 'Expected ' + str(expected) + ', got ' + str(sum)

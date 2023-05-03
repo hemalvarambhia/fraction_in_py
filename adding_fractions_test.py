@@ -7,7 +7,8 @@ class Fraction:
        
    def __add__(self, augend):
        if augend.denominator == self.denominator:
-           return Fraction(int(self.numerator) + int(augend.numerator), self.denominator)
+           lcm = math.lcm(augend.denominator, self.denominator)  # lowest common multiple
+           return Fraction(int(self.numerator) + int(augend.numerator), lcm)
        else:
            lcm = math.lcm(augend.denominator, self.denominator) # lowest common multiple
            return Fraction(lcm/self.denominator + lcm / augend.denominator,lcm)

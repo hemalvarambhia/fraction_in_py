@@ -1,4 +1,5 @@
 import unittest
+import math
 class Fraction:
    def __init__(self, numerator, denominator = 1):
        self.numerator = int(numerator)
@@ -8,7 +9,8 @@ class Fraction:
        if augend.denominator == self.denominator:
            return Fraction(int(self.numerator) + int(augend.numerator), self.denominator)
        else:
-           return Fraction(self.denominator + augend.denominator,augend.denominator * self.denominator)
+           lcm = math.lcm(augend.denominator, self.denominator) # lowest common multiple
+           return Fraction(lcm/self.denominator + lcm / augend.denominator,lcm)
 
 
 
@@ -99,6 +101,13 @@ class AddingFractionsTest(unittest.TestCase):
         sum = addend + augend
         self.assert_equals(sum.numerator, 8)
         self.assert_equals(sum.denominator, 15)
+
+    def test_that_1_on_2_plus_1_on_4_equals_3_on_4(self):
+        addend = Fraction(1, 2)
+        augend = Fraction(1, 4)
+        sum = addend + augend
+        self.assert_equals(sum.numerator, 3)
+        self.assert_equals(sum.denominator, 4)
 
     def assert_equals(self, sum, expected):
         assert sum == expected, 'Expected ' + str(expected) + ', got ' + str(sum)

@@ -8,7 +8,7 @@ class Fraction:
        if augend.denominator == self.denominator:
            return Fraction(int(self.numerator) + int(augend.numerator), self.denominator)
        else:
-           return Fraction(7,12)
+           return Fraction(7,augend.denominator * self.denominator)
 
 
 

@@ -11,7 +11,7 @@ class Fraction:
            return Fraction(int(self.numerator) + int(augend.numerator), lcm)
        else:
            lcm = math.lcm(augend.denominator, self.denominator) # lowest common multiple
-           return Fraction(lcm/self.denominator + lcm / augend.denominator,lcm)
+           return Fraction(self.numerator * lcm / self.denominator + augend.numerator * lcm / augend.denominator,lcm)
 
 
 
@@ -109,6 +109,13 @@ class AddingFractionsTest(unittest.TestCase):
         sum = addend + augend
         self.assert_equals(sum.numerator, 3)
         self.assert_equals(sum.denominator, 4)
+
+    def test_that_2_over_21_plus_1_over_6_is_11_over_42(self):
+        addend = Fraction(2, 21)
+        augend = Fraction(1, 6)
+        sum = addend + augend
+        self.assert_equals(sum.numerator, 11)
+        self.assert_equals(sum.denominator, 42)
 
     def assert_equals(self, sum, expected):
         assert sum == expected, 'Expected ' + str(expected) + ', got ' + str(sum)

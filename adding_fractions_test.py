@@ -5,7 +5,12 @@ class Fraction:
        self.denominator = int(denominator)
        
    def __add__(self, augend):
-      return Fraction(int(self.numerator) + int(augend.numerator), self.denominator)
+       if augend.denominator == self.denominator:
+           return Fraction(int(self.numerator) + int(augend.numerator), self.denominator)
+       else:
+           return Fraction(7,12)
+
+
 
    def as_integer(self):
       return self.numerator

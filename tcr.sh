@@ -1,1 +1,1 @@
-python3 adding_fractions_test.py && git commit -am 'Tests passed' || git restore .
+pytest adding_fractions_test.py && git commit -am 'Tests passed' || git restore .

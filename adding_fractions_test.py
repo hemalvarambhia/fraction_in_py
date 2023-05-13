@@ -61,11 +61,12 @@ class AddingFractionsTest(unittest.TestCase):
         self.assert_equals(sum.as_integer(), -2)
 
     def test_that_1_on_3_plus_1_on_3_equals_2_on_3(self):
-       addend = Fraction(1,3)
-       augend = Fraction(1,3)
+       addend = Fraction(1, 3)
+       augend = Fraction(1, 3)
+
        sum = addend + augend
-       self.assert_equals(sum.numerator, 2)
-       self.assert_equals(sum.denominator, 3)
+
+       self.assert_equals(sum, Fraction(2, 3))
 
     def test_that_2_on_3_plus_2_on_3_equals_4_on_3(self):
        addend = Fraction(2,3)
@@ -113,7 +114,11 @@ class AddingFractionsTest(unittest.TestCase):
         self.assert_equals(sum.denominator, 42)
 
     def assert_equals(self, sum, expected):
-        assert sum == expected, 'Expected ' + str(expected) + ', got ' + str(sum)
+        if isinstance(sum, int):
+            assert sum == expected, 'Expected ' + str(expected) + ', got ' + str(sum)
+        else:
+            self.assert_equals(sum.numerator, expected.numerator)
+            self.assert_equals(sum.denominator, expected.denominator)
 
 if __name__ == "__main__":
 

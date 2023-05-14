@@ -87,12 +87,11 @@ class AddingFractionsTest(unittest.TestCase):
     def test_that_1_on_4_plus_1_on_3_equals_7_on_12(self):
        addend = Fraction(1, 4)
        augend = Fraction(1, 3)
-       sum = addend + augend
-       self.assert_equals(sum.numerator, 7)
-       self.assert_equals(sum.denominator, 12)
 
-       # This test fails ^^^
-       # Next step is to add Fractions that do not have the same denominator
+       sum = addend + augend
+
+       self.assert_equals(sum, Fraction(7, 12))
+
 
     def test_that_1_on_3_plus_1_on_5_equals_8_on_15(self):
         addend = Fraction(1, 3)

@@ -121,7 +121,7 @@ class AddingFractionsTest(unittest.TestCase):
             assert sum == expected, 'Expected ' + str(expected) + ', got ' + str(sum)
         else:
             assert sum.numerator == expected.numerator, 'Numerator: expected: ' + str(expected) + ', but got ' + str(sum.numerator)
-            assert sum.denominator == expected.denominator, 'Numerator: expected: ' + str(expected) + ', but got ' + str(sum.denominator)
+            assert sum.denominator == expected.denominator, 'Denominator: expected: ' + str(expected) + ', but got ' + str(sum.denominator)
 
 if __name__ == "__main__":
 

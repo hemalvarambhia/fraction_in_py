@@ -120,8 +120,8 @@ class AddingFractionsTest(unittest.TestCase):
         if isinstance(sum, int):
             assert sum == expected, 'Expected ' + str(expected) + ', got ' + str(sum)
         else:
-            self.assert_equals(sum.numerator, expected.numerator)
-            self.assert_equals(sum.denominator, expected.denominator)
+            assert sum.numerator == expected.numerator, 'Numerator: expected: ' + str(expected) + ', but got ' + str(sum.numerator)
+            assert sum.denominator == expected.denominator, 'Numerator: expected: ' + str(expected) + ', but got ' + str(sum.denominator)
 
 if __name__ == "__main__":
 

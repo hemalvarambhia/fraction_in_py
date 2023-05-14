@@ -69,11 +69,14 @@ class AddingFractionsTest(unittest.TestCase):
        self.assert_equals(sum, Fraction(2, 3))
 
     def test_that_2_on_3_plus_2_on_3_equals_4_on_3(self):
-       addend = Fraction(2,3)
-       augend = Fraction(2,3)
+       addend = Fraction(2, 3)
+       augend = Fraction(2, 3)
+
        sum = addend + augend
+
        self.assert_equals(sum.numerator, 4)
        self.assert_equals(sum.denominator, 3)
+       self.assert_equals(sum, Fraction(4, 3))
 
     def test_that_2_on_5_plus_1_on_5_equals_3_on_5(self):
        addend = Fraction(2, 5)

@@ -1,3 +1,4 @@
+import math
 class Fraction:
     def __init__(self, numerator, denominator=1):
         self.numerator = int(numerator)

@@ -112,9 +112,10 @@ class AddingFractionsTest(unittest.TestCase):
     def test_that_2_over_21_plus_1_over_6_is_11_over_42(self):
         addend = Fraction(2, 21)
         augend = Fraction(1, 6)
+
         sum = addend + augend
-        self.assert_equals(sum.numerator, 11)
-        self.assert_equals(sum.denominator, 42)
+
+        self.assert_equals(sum, Fraction(11, 42))
 
     def assert_equals(self, sum, expected):
         if isinstance(sum, int):

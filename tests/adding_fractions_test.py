@@ -1,4 +1,4 @@
-import os.path
+import os
 import unittest
 import sys
 path = os.path.abspath("src")

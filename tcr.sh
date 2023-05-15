@@ -1,1 +1,1 @@
-pytest && git commit -am 'Tests passed' || git restore .
+pytest && git commit -am 'Tests passed' || git restore src

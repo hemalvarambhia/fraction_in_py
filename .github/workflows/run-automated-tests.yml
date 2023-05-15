@@ -10,4 +10,4 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -U pytest
-      - run: pytest adding_fractions_test.py
+      - run: pytest

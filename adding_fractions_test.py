@@ -9,10 +9,6 @@ class Fraction:
        lcm = math.lcm(augend.denominator, self.denominator)  # lowest common multiple
        return Fraction(self.numerator * lcm / self.denominator + augend.numerator * lcm / augend.denominator,lcm)
 
-
-   def as_integer(self):
-      return self.numerator
-
 class AddingFractionsTest(unittest.TestCase):
     def testHookUp(self):
         assert 0 + 0 == 0

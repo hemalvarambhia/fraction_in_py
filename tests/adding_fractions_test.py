@@ -1,8 +1,4 @@
-import os
 import unittest
-import sys
-path = os.path.abspath("src")
-sys.path.append(path)
 from fraction import Fraction
 
 class AddingFractionsTest(unittest.TestCase):

@@ -29,8 +29,10 @@ class AddingFractionsTest(unittest.TestCase):
     def test_that_zero_plus_one_equals_one(self):
         addend = Fraction(0)
         augend = Fraction(1)
+
         sum = addend + augend
-        self.assert_equals(sum.as_integer(), 1)
+
+        self.assert_equals(sum, Fraction(1))
 
     def test_that_one_plus_one_equals_two(self):
         addend = Fraction(1)

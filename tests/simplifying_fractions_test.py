@@ -1,6 +1,4 @@
 import unittest
-
-import pytest
 from fraction import Fraction
 
 class SimplifyingFractions(unittest.TestCase):

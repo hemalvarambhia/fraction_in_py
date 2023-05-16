@@ -10,7 +10,6 @@ class SimplifyingFractions(unittest.TestCase):
     def test_simplifying_a_fraction_with_a_common_divisor(self):
         self.assert_equals(Fraction(5, 10), Fraction(1, 2))
 
-    @pytest.mark.skip(reason = "Pending")
     def test_simplifying_a_fraction_with_a_negative_numerator(self):
         self.assert_equals(Fraction(-5, 10), Fraction(-1, 2))
 

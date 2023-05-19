@@ -26,6 +26,9 @@ class MyTestCase(unittest.TestCase):
 
         self.assertNotEqual(f, g, "Expected {} not to equal {}".format(f, g))
 
+    def test_fractions_are_not_equal_to_objects_of_a_different_type(self):
+        self.assertNotEqual(Fraction(8, 5), 'string')
+
 
 if __name__ == '__main__':
     unittest.main()

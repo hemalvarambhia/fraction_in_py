@@ -11,8 +11,8 @@ class MyTestCase(unittest.TestCase):
         f = Fraction(3, 7)
         g = Fraction(3, 7)
 
-        self.assertEquals(f, g)
-        self.assertEquals(g, f)
+        self.assertEqual(f, g)
+        self.assertEqual(g, f)
 
     def test_fractions_with_different_numerators_are_unequal(self):
         f = Fraction(4, 5)

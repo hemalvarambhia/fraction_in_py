@@ -12,3 +12,6 @@ class Fraction:
 
     def __eq__(self, other):
         return self.numerator == other.numerator
+
+    def __str__(self):
+        return str(self.numerator) + "/" +str(self.denominator)

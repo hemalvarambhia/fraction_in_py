@@ -14,6 +14,12 @@ class MyTestCase(unittest.TestCase):
         self.assertEquals(f, g)
         self.assertEquals(g, f)
 
+    def test_fractions_with_different_numerators_are_unequal(self):
+        f = Fraction(4, 5)
+        g = Fraction(3, 5)
+
+        self.assertNotEquals(f, g)
+
 
 if __name__ == '__main__':
     unittest.main()

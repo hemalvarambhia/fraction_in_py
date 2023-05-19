@@ -20,6 +20,12 @@ class MyTestCase(unittest.TestCase):
 
         self.assertNotEqual(f, g)
 
+    def test_fractions_with_different_denominators_are_unequal(self):
+        f = Fraction(8, 13)
+        g = Fraction(8, 99)
+
+        self.assertNotEqual(f, g, "Expected {} not to equal {}".format(f, g))
+
 
 if __name__ == '__main__':
     unittest.main()

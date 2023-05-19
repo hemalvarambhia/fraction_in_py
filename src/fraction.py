@@ -11,7 +11,7 @@ class Fraction:
         return Fraction(self.numerator * lcm / self.denominator + augend.numerator * lcm / augend.denominator, lcm)
 
     def __eq__(self, other):
-        return self.numerator == other.numerator
+        return self.numerator == other.numerator and self.denominator == other.denominator
 
     def __str__(self):
         return str(self.numerator) + "/" +str(self.denominator)

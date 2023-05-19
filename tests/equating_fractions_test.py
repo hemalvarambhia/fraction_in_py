@@ -18,7 +18,7 @@ class MyTestCase(unittest.TestCase):
         f = Fraction(4, 5)
         g = Fraction(3, 5)
 
-        self.assertNotEquals(f, g)
+        assert f != g
 
 
 if __name__ == '__main__':

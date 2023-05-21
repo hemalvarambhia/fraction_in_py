@@ -13,7 +13,7 @@ class AddingFractionsTest(unittest.TestCase):
 
         sum = addend + augend
 
-        self.assert_equals(sum, Fraction(0))
+        self.assertEqual(sum, Fraction(0))
 
     def test_that_zero_plus_one_equals_one(self):
         addend = Fraction(0)
@@ -21,7 +21,7 @@ class AddingFractionsTest(unittest.TestCase):
 
         sum = addend + augend
 
-        self.assert_equals(sum, Fraction(1))
+        self.assertEqual(sum, Fraction(1))
 
     def test_that_one_plus_one_equals_two(self):
         addend = Fraction(1)
@@ -29,7 +29,7 @@ class AddingFractionsTest(unittest.TestCase):
 
         sum = addend + augend
 
-        self.assert_equals(sum, Fraction(2))
+        self.assertEqual(sum, Fraction(2))
 
     def test_that_minus_one_plus_zero_equals_minus_one(self):
         addend = Fraction(-1)
@@ -37,7 +37,7 @@ class AddingFractionsTest(unittest.TestCase):
 
         sum = addend + augend
 
-        self.assert_equals(sum, Fraction(-1))
+        self.assertEqual(sum, Fraction(-1))
 
     def test_that_minus_one_plus_one_equals_zero(self):
         addend = Fraction(-1)
@@ -45,7 +45,7 @@ class AddingFractionsTest(unittest.TestCase):
 
         sum = addend + augend
 
-        self.assert_equals(sum, Fraction(0))
+        self.assertEqual(sum, Fraction(0))
 
     def test_that_minus_one_plus_two_equals_one(self):
         addend = Fraction(-1)
@@ -53,7 +53,7 @@ class AddingFractionsTest(unittest.TestCase):
 
         sum = addend + augend
 
-        self.assert_equals(sum, Fraction(1))
+        self.assertEqual(sum, Fraction(1))
 
     def test_that_minus_one_plus_minus_one_equals_minus_two(self):
         addend = Fraction(-1)
@@ -61,7 +61,7 @@ class AddingFractionsTest(unittest.TestCase):
 
         sum = addend + augend
 
-        self.assert_equals(sum, Fraction(-2))
+        self.assertEqual(sum, Fraction(-2))
 
     def test_that_1_on_3_plus_1_on_3_equals_2_on_3(self):
         addend = Fraction(1, 3)
@@ -69,7 +69,7 @@ class AddingFractionsTest(unittest.TestCase):
 
         sum = addend + augend
 
-        self.assert_equals(sum, Fraction(2, 3))
+        self.assertEqual(sum, Fraction(2, 3))
 
     def test_that_2_on_3_plus_2_on_3_equals_4_on_3(self):
         addend = Fraction(2, 3)
@@ -77,7 +77,7 @@ class AddingFractionsTest(unittest.TestCase):
 
         sum = addend + augend
 
-        self.assert_equals(sum, Fraction(4, 3))
+        self.assertEqual(sum, Fraction(4, 3))
 
     def test_that_2_on_5_plus_1_on_5_equals_3_on_5(self):
         addend = Fraction(2, 5)
@@ -85,7 +85,7 @@ class AddingFractionsTest(unittest.TestCase):
 
         sum = addend + augend
 
-        self.assert_equals(sum, Fraction(3, 5))
+        self.assertEqual(sum, Fraction(3, 5))
 
     def test_that_1_on_4_plus_1_on_3_equals_7_on_12(self):
         addend = Fraction(1, 4)
@@ -93,7 +93,7 @@ class AddingFractionsTest(unittest.TestCase):
 
         sum = addend + augend
 
-        self.assert_equals(sum, Fraction(7, 12))
+        self.assertEqual(sum, Fraction(7, 12))
 
     def test_that_1_on_3_plus_1_on_5_equals_8_on_15(self):
         addend = Fraction(1, 3)
@@ -101,7 +101,7 @@ class AddingFractionsTest(unittest.TestCase):
 
         sum = addend + augend
 
-        self.assert_equals(sum, Fraction(8, 15))
+        self.assertEqual(sum, Fraction(8, 15))
 
     def test_that_1_on_2_plus_1_on_4_equals_3_on_4(self):
         addend = Fraction(1, 2)
@@ -109,7 +109,7 @@ class AddingFractionsTest(unittest.TestCase):
 
         sum = addend + augend
 
-        self.assert_equals(sum, Fraction(3, 4))
+        self.assertEqual(sum, Fraction(3, 4))
 
     def test_that_2_over_21_plus_1_over_6_is_11_over_42(self):
         addend = Fraction(2, 21)
@@ -117,10 +117,7 @@ class AddingFractionsTest(unittest.TestCase):
 
         sum = addend + augend
 
-        self.assert_equals(sum, Fraction(11, 42))
-
-    def assert_equals(self, sum, expected):
-        self.assertEqual(sum, expected)
+        self.assertEqual(sum, Fraction(11, 42))
 
 
 if __name__ == "__main__":

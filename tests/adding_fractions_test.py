@@ -120,7 +120,7 @@ class AddingFractionsTest(unittest.TestCase):
         self.assert_equals(sum, Fraction(11, 42))
 
     def assert_equals(self, sum, expected):
-       self.assertEqual(sum, expected)
+        self.assertEqual(sum, expected)
 
 
 if __name__ == "__main__":

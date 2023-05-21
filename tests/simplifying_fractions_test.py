@@ -15,8 +15,7 @@ class SimplifyingFractions(unittest.TestCase):
         self.assert_equals(Fraction(-2, -6), Fraction(1, 3))
 
     def assert_equals(self, sum, expected):
-        assert sum.numerator == expected.numerator, 'Numerator: expected: ' + str(expected) + ', but got ' + str(sum.numerator)
-        assert sum.denominator == expected.denominator, 'Denominator: expected: ' + str(expected) + ', but got ' + str(sum.denominator)
+        self.assertEqual(sum, expected)
 
 if __name__ == '__main__':
     unittest.main()

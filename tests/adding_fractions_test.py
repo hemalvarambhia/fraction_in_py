@@ -1,6 +1,7 @@
 import unittest
 from fraction import Fraction
 
+
 class AddingFractionsTest(unittest.TestCase):
     def testHookUp(self):
         assert 0 + 0 == 0
@@ -63,37 +64,36 @@ class AddingFractionsTest(unittest.TestCase):
         self.assert_equals(sum, Fraction(-2))
 
     def test_that_1_on_3_plus_1_on_3_equals_2_on_3(self):
-       addend = Fraction(1, 3)
-       augend = Fraction(1, 3)
+        addend = Fraction(1, 3)
+        augend = Fraction(1, 3)
 
-       sum = addend + augend
+        sum = addend + augend
 
-       self.assert_equals(sum, Fraction(2, 3))
+        self.assert_equals(sum, Fraction(2, 3))
 
     def test_that_2_on_3_plus_2_on_3_equals_4_on_3(self):
-       addend = Fraction(2, 3)
-       augend = Fraction(2, 3)
+        addend = Fraction(2, 3)
+        augend = Fraction(2, 3)
 
-       sum = addend + augend
+        sum = addend + augend
 
-       self.assert_equals(sum, Fraction(4, 3))
+        self.assert_equals(sum, Fraction(4, 3))
 
     def test_that_2_on_5_plus_1_on_5_equals_3_on_5(self):
-       addend = Fraction(2, 5)
-       augend = Fraction(1, 5)
+        addend = Fraction(2, 5)
+        augend = Fraction(1, 5)
 
-       sum = addend + augend
+        sum = addend + augend
 
-       self.assert_equals(sum, Fraction(3, 5))
+        self.assert_equals(sum, Fraction(3, 5))
 
     def test_that_1_on_4_plus_1_on_3_equals_7_on_12(self):
-       addend = Fraction(1, 4)
-       augend = Fraction(1, 3)
+        addend = Fraction(1, 4)
+        augend = Fraction(1, 3)
 
-       sum = addend + augend
+        sum = addend + augend
 
-       self.assert_equals(sum, Fraction(7, 12))
-
+        self.assert_equals(sum, Fraction(7, 12))
 
     def test_that_1_on_3_plus_1_on_5_equals_8_on_15(self):
         addend = Fraction(1, 3)
@@ -120,9 +120,16 @@ class AddingFractionsTest(unittest.TestCase):
         self.assert_equals(sum, Fraction(11, 42))
 
     def assert_equals(self, sum, expected):
-        assert sum.numerator == expected.numerator, 'Numerator: expected: ' + str(expected) + ', but got ' + str(sum.numerator)
-        assert sum.denominator == expected.denominator, 'Denominator: expected: ' + str(expected) + ', but got ' + str(sum.denominator)
+        assert sum.numerator == expected.numerator, (
+            "Numerator: expected: " + str(expected) + ", but got " + str(sum.numerator)
+        )
+        assert sum.denominator == expected.denominator, (
+            "Denominator: expected: "
+            + str(expected)
+            + ", but got "
+            + str(sum.denominator)
+        )
+
 
 if __name__ == "__main__":
-
-    unittest.main() # run all tests
+    unittest.main()  # run all tests

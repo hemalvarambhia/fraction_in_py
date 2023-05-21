@@ -1,6 +1,7 @@
 import unittest
 from fraction import Fraction
 
+
 class SimplifyingFractions(unittest.TestCase):
     def test_fraction_that_is_already_simplified(self):
         sum1 = Fraction(3, 4)
@@ -23,5 +24,5 @@ class SimplifyingFractions(unittest.TestCase):
         self.assertEqual(sum1, expected)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

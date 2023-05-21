@@ -1,4 +1,6 @@
 import math
+
+
 class Fraction:
     def __init__(self, numerator, denominator=1):
         divisor = math.gcd(int(numerator), int(denominator))
@@ -8,13 +10,19 @@ class Fraction:
 
     def __add__(self, augend):
         lcm = math.lcm(augend.denominator, self.denominator)  # lowest common multiple
-        return Fraction(self.numerator * lcm / self.denominator + augend.numerator * lcm / augend.denominator, lcm)
+        return Fraction(
+            self.numerator * lcm / self.denominator
+            + augend.numerator * lcm / augend.denominator,
+            lcm,
+        )
 
     def __eq__(self, other):
         if type(other) is not Fraction:
             return False
 
-        return self.numerator == other.numerator and self.denominator == other.denominator
+        return (
+            self.numerator == other.numerator and self.denominator == other.denominator
+        )
 
     def __str__(self):
-        return str(self.numerator) + "/" +str(self.denominator)
+        return str(self.numerator) + "/" + str(self.denominator)
